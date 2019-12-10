@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>iFarms</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-content *ngIf="pageName == 'wheat'">
+        <ion-card>
+            <img src="../../assets/wheat.png" />
+            <div class="card-title">
+                <P>Wheat</P>
+            </div>
+            <div class="card-subtitle">
+                <h5>Crop</h5>
+            </div>
+    
+            <ion-row>
+                <ion-col size="8">
+                    <p class="value kilo1">80 kgs</p>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value amount1">Rs. 32.0</p>
+                    <p class="value per1">per kg</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="12">
+                    <p class="value title1">Seller</p>
+                    <p class="value person1">Sasi Kumar</p>
+                    <p class="value place1">Coimbatore,TN</p>
+                    <p class="value rating1">
+                        <ion-icon class="value icon1" name="star"></ion-icon>4.3 rated</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <p class="value product1">Quantity</p>
+                </ion-col>
+                <ion-col size="6">
+                    <p class="value kg1">kgs:</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="6">
+                    <p class=" value contract1">Forward Contract</p>
+                    <p class=" value order1">Delivery by,</p>
+                </ion-col>
+                <ion-col size="6">
+                    <p class="value delivery1">Sep 18,2018</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="4">
+                    <p class=" value icon2">
+                        <ion-icon name="cart"></ion-icon>
+                    </p>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-button shape="round">ORDER NOW</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value icon3">
+                        <ion-icon name="heart-empty"></ion-icon>
+                    </p>
+                </ion-col>
+            </ion-row>
+    
+        </ion-card>
+    </ion-content>
+    
+    <ion-content *ngIf="pageName == 'corn'">
+            <ion-card>
+                <img src="../../assets/cornss.jpeg" />
+                <div class="card-title">
+                    <P>Corn</P>
+                </div>
+                <div class="card-subtitle">
+                    <h5>Crop</h5>
+                </div>
+        
+                <ion-row>
+                    <ion-col size="8">
+                        <p class="value kilo1">80 kgs</p>
+                    </ion-col>
+                    <ion-col size="4">
+                        <p class="value amount1">Rs. 32.0</p>
+                        <p class="value per1">per kg</p>
+                    </ion-col>
+                </ion-row>
+        
+                <ion-row>
+                    <ion-col size="12">
+                        <p class="value title1">Seller</p>
+                        <p class="value person1">Sasi Kumar</p>
+                        <p class="value place1">Coimbatore,TN</p>
+                        <p class="value rating1">
+                            <ion-icon class="value icon1" name="star"></ion-icon>4.3 rated</p>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="6">
+                        <p class="value product1">Quantity</p>
+                    </ion-col>
+                    <ion-col size="6">
+                        <p class="value kg1">kgs:</p>
+                    </ion-col>
+                </ion-row>
+        
+                <ion-row>
+                    <ion-col size="6">
+                        <p class=" value contract1">Forward Contract</p>
+                        <p class=" value order1">Delivery by,</p>
+                    </ion-col>
+                    <ion-col size="6">
+                        <p class="value delivery1">Sep 18,2018</p>
+                    </ion-col>
+                </ion-row>
+        
+                <ion-row>
+                    <ion-col size="4">
+                        <p class=" value icon2">
+                            <ion-icon name="cart"></ion-icon>
+                        </p>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-button shape="round">ORDER NOW</ion-button>
+                    </ion-col>
+                    <ion-col size="4">
+                        <p class="value icon3">
+                            <ion-icon name="heart-empty"></ion-icon>
+                        </p>
+                    </ion-col>
+                </ion-row>
+        
+            </ion-card>
+        </ion-content>
+</ion-content>

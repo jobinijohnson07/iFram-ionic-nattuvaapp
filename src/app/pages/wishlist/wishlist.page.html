@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+           Wishlist
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor = "let item of data">
+        <ion-row>
+            <ion-col size="6">
+                <img class=" "  src="{{item.imageUrl}}" /> 
+            </ion-col>
+            <!-- productId":"123",,"unit":"1","":"2019-11-04","isForwardContract":"no","":"2155 -->
+            <ion-col size="6">
+                <p class="value name">{{item.category}}</p>
+                <p class="value fruit">{{item.name}}</p>
+                <p class="value kgs">{{item.quantity}}</p>
+                <p class="value product">{{item.price}}</p>
+                <p class="value person">{{item.sellerId}}</p>
+                <p class="value date">{{item.deliveryDate}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <!-- <ion-card>
+        <ion-row>
+            <ion-col size="6">
+                <img class="" src="../../assets/mango.jpg" alt="Card image cap">
+            </ion-col>
+            <ion-col size="6">
+                <ion-col size="6">
+                    <p class="value name1">Fruits</p>
+                    <p class="value fruit">Mango</p>
+                    <p class="value kgs">210.0 kgs</p>
+                    <p class="value product1">Seller</p>
+                    <p class="value person">Sahankar</p>
+                    <p class="value date">Delivery by Sep1, 2019</p>
+                </ion-col>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+        <ion-row>
+            <ion-col size="6">
+                <img class="" src="../../assets/banana.jpg" alt="Card image cap">
+            </ion-col>
+            <ion-col size="6">
+                <ion-col size="6">
+                    <p class="value name2">Fruits</p>
+                    <p class="value fruit">Bananas</p>
+                    <p class="value kgs">210.0 kgs</p>
+                    <p class="value product">Seller</p>
+                    <p class="value person">Sahankar</p>
+                    <p class="value date">Delivery by Sep1, 2019</p>
+                </ion-col>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-card>
+        <ion-row>
+            <ion-col size="6">
+                <img class="" src=" " alt="Card image cap">
+            </ion-col>
+            <ion-col size="6">
+                <p class="value name3">{{}}</p>
+                <p class="value fruit">{{}}</p>
+                <p class="value kgs">{{}}</p>
+                <p class="value product">{{}}</p>
+                <p class="value person">{{}}</p>
+                <p class="value date">{{}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-card> -->
+</ion-content>

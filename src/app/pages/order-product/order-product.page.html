@@ -1,0 +1,85 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Order Product</ion-title>
+        <p class=" value back"><ion-icon name="arrow-back" (click)='openChat()'></ion-icon></p> 
+       
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form name="form" (ngSubmit)="addToCart()" #f="ngForm">
+
+        <ion-card>
+            <img src="{{details.imageUrl}}" />
+            <div class="card-title">
+                <P>{{details.name}}</P>
+            </div>
+            <div class="card-subtitle">
+                <h5>{{details.category}}</h5>
+            </div>
+
+            <ion-row>
+                <ion-col size="8">
+                    <p class="value kilo1">{{details.quantity}}</p>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value amount1">Rs.{{details.price}}</p>
+                    <p class="value per1">per kg</p>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="6">
+                    <p class="value title1">Seller</p>
+                    <p class="value person1">Sasi Kumar</p>
+                    <p class="value place1">Coimbatore,TN</p>
+                    <p class="value rating1">
+                        <ion-icon class="value icon1" name="star"></ion-icon>4.3 rated
+                    </p>
+                </ion-col>
+            
+                <ion-col size="6">
+                        <div style="text-align: right">
+                            <ion-avatar>
+                               <img src="../../assets/img_avatar.png" >
+                            </ion-avatar>
+                        </div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <p class="value product1">Quantity</p>
+                </ion-col>
+                <ion-col size="6">
+                <p class="value kg1">
+                        <ion-input type="text" placeholder="kgs:" name="unit"></ion-input>  
+                </p>
+                
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="6">
+                    <p class=" value contract1">Forward Contract</p>
+                    <p class=" value order1">Delivery by,</p>
+                </ion-col>
+                <ion-col size="6">
+                    <p class="value delivery1">Sep 18,2018</p>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="4">         
+                         <p clas=" value icon3"><ion-icon name= "cart"></ion-icon></p>    
+                </ion-col>
+                <ion-col size="4">
+                    <ion-button shape="round" (click)="addToCart()">ORDER NOW</ion-button>
+                </ion-col>
+                <ion-col size="4">   
+                        <p class=" value icon3"><ion-icon name= "heart-empty"(click)='openClick()'></ion-icon></p>  
+                </ion-col>
+            </ion-row>
+
+        </ion-card>
+    </form>
+</ion-content>

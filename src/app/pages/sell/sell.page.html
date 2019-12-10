@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Add Product</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <p class="title">Fill in details of your product</p>
+    <form name="form" (ngSubmit)="addProduct()" #f="ngForm">
+        <ion-item>
+            <ion-label>Category</ion-label>
+            <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" [(ngModel)]="products.category"
+                name="category">
+                <ion-select-option value="fruits">Fruits</ion-select-option>
+                <ion-select-option value="vegetables">Vegetables</ion-select-option>
+                <ion-select-option value="dairy">Dairy</ion-select-option>
+                <ion-select-option value="seeds">Seeds</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Enter Name of Product" name="name" [(ngModel)]="products.name">
+            </ion-input>
+        </ion-item>
+
+        <p class="subtitle">Upload an image of your product</p>
+
+        <ion-card>
+            <ion-row class="camera-icon">
+                <ion-col size="12">
+                    <ion-icon *ngIf="imageBase == null || imageBase == undefined || imageBase == ''" name="camera">
+                    </ion-icon>
+                    <img *ngIf="imageBase != null && imageBase != undefined && imageBase != ''" src="{{imageBase}}">
+                </ion-col>
+            </ion-row>
+            <ion-row class="files-btn">
+                <ion-col size="6">
+                    <span class="fileUpload" (click)="openCam()" name="imageUrl" [(ngModel)]="products.imageUrl">OPEN
+                        CAMERA</span>
+                </ion-col>
+                <ion-col size="6">
+                    <div class="fileUpload">
+                        <span>CHOOSE IMAGES</span>
+                        <input type="file" class="choose" (change)="uploadFile($event)" />
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+
+        <ion-item>
+            <ion-input type="number" placeholder="Enter Price" name="price" [(ngModel)]="products.price"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Enter Quantity" name="quantity" [(ngModel)]="products.quantity">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Enter unit" name="unit" [(ngModel)]="products.unit"></ion-input>
+        </ion-item>
+
+        <ion-item class="forward">
+            <ion-label>Forward Contract</ion-label>
+            <ion-toggle color="secondary" [(ngModel)]="products.isForwardContract" name="isForwardContract"></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="{{type}}" placeholder="Enter Delivery Date" name="deliveryDate" (click)="typeChange()"
+                [(ngModel)]="products.deliveryDate"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="Enter Seller Id" name="sellerId" [(ngModel)]="products.sellerId">
+            </ion-input>
+        </ion-item>
+
+        <ion-row>
+            <ion-col size="6">
+                <ion-button shape="round" (click)="onSubmit">CANCEL</ion-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-button shape="round" (click)="addProduct()">ADD PRODUCT</ion-button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>

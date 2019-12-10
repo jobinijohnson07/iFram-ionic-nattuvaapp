@@ -1,0 +1,154 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            iFarms
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div text-left>
+        <ion-row>
+            <ion-col size="8">
+                <p class="name">{{ 'Home.name' | translate }}</p>
+            </ion-col>
+            <ion-col size="4">
+                    <ion-icon name="options"></ion-icon>
+                <p class="element">{{ 'Home.View-all' | translate }}</p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide>
+            <a (click)="goto('Farm')">
+                <ion-card class="main-card">
+                    <img class="farm-img" src="../../assets/farm.jpeg" />
+                    <ion-row>
+                        <ion-col size="12">
+                            <p class="value card-title">Farm</p>
+                            <p class="value card-subtitle">Rangan's Farm</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </a>
+        </ion-slide>
+        <ion-slide>
+            <a (click)="goto('IFFCO')">
+                <ion-card class="main-card">
+                    <img class="iffco-img" src="../../assets/iffcoo-logo.png" />
+                    <ion-row>
+                        <ion-col size="12">
+                            <p class="value card-title">Cooperative</p>
+                            <p class="value card-subtitle">IFFCO</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </a>
+        </ion-slide>
+        <ion-slide>
+            <a (click)="goto('Aavin')">
+                <ion-card class="main-card">
+                    <img class="aavin-img" src="../../assets/aavin.jpeg" />
+                    <ion-row>
+                        <ion-col size="12">
+                            <p class="value card-title">Milk</p>
+                            <p class="value card-subtitle">Aavin</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </a>
+        </ion-slide>
+    </ion-slides>
+    <div text-left>
+        <ion-row>
+            <ion-col size="8">
+                <p class="name">{{ 'Home.Available-products' | translate }}</p>
+            </ion-col>
+            <ion-col size="4">
+                <ion-icon name="options"></ion-icon>
+                <p class="element">{{ 'Home.View-all' | translate }}</p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide *ngFor="let item of product">
+            <a (click)="orderProduct(item)">
+                <ion-card>
+                    <img src="{{item.imageUrl}}" />
+                    <ion-row>
+                        <ion-col size="6">
+                            <p class="value card-title">{{item.category}}</p>
+                            <p class="value card-subtitle">{{item.name}}</p>
+                        </ion-col>
+                        <ion-col size="6">
+                            <p class="value rate">Rs.{{item.price}}</p>
+                            <p class="value per">{{item.quantity}} per kg</p>
+
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+            </a>
+        </ion-slide>
+    </ion-slides>
+    <div text-left>
+        <ion-row>
+            <ion-col size="8">
+                <p class="name">{{ 'Home.Order-Now' | translate }}</p>
+            </ion-col>
+            <ion-col size="4">
+                <ion-icon name="options"></ion-icon>
+                <p class="element">{{ 'Home.View-all' | translate }}</p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide>
+            <ion-card>
+                <img src="../../assets/mango.jpg" />
+                <ion-row>
+                    <ion-col size="6">
+                        <p class="value card-title">Fruits</p>
+                        <p class="value card-subtitle">Mango</p>
+                    </ion-col>
+                    <ion-col size="6">
+                        <p class="value rate1">Rs.120.0</p>
+                        <p class="value per1">per kg</p>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <img src="../../assets/potato.jpg" />
+                <ion-row>
+                    <ion-col size="6">
+                        <p class="value card-title">Vegetables</p>
+                        <p class="value card-subtitle">Potato</p>
+                    </ion-col>
+                    <ion-col size="6">
+                        <p class="value rate1">Rs.520.0</p>
+                        <p class="value per1">per kg</p>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <img src="../../assets/blueberries.jpg" />
+                <ion-row>
+                    <ion-col size="6">
+                        <p class="value card-title">Fruits</p>
+                        <p class="value card-subtitle">Blueberries</p>
+                    </ion-col>
+                    <ion-col size="6">
+                        <p class="value rate1">Rs.320.0</p>
+                        <p class="value per1">per kg</p>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

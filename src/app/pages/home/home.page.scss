@@ -1,0 +1,94 @@
+ion-card {
+    img {
+        height: 25vh !important;
+    }
+}
+
+.card-title {
+    margin-top: -4px;
+    font-size: 16px;
+}
+
+.card-subtitle {
+    margin-top: -27px;
+    margin-bottom: -4px;
+    font-size: 18px;
+    font-weight: w600;
+    color: black;
+    font-weight: bold;
+}
+
+.name {
+    color: black;
+    font-size: 20px;
+}
+
+.iffco-img{
+    width: 350px;
+    height: 200px !important;
+    background: #00853cbd;
+}
+.farm-img{
+    width: 350px;
+    height: 200px !important;  
+}
+
+p {
+    text-align: left;
+    padding: 10px;
+    margin-top: -1px;
+    font-size: 12spx
+}
+ion-icon {
+    color: #00853c;
+    margin-top: -5px;
+    margin-bottom: -14px;
+}
+.element {
+    color: orange;
+    margin-top: -19px;
+    margin-right: -2px;
+    margin-left: -2px;
+    text-align: right;
+    font-size: 16px;
+}
+.rate {
+    text-align: right;
+    margin-right: 21px;
+    margin-top: 1px;
+    font-weight: w600;
+    font-size: 15px;
+}
+
+.rate1 {
+    text-align: right;
+    margin-right: 16px;
+    margin-top: 1px;
+    font-weight: w600;
+    font-size: 15px;
+}
+.per {
+    text-align: right;
+    margin-right: 6px;
+    margin-top: -28px;
+    margin-bottom: -12px;
+    font-weight: w600;
+    font-size: 15px;
+}
+
+.per1 {
+    text-align: right;
+    margin-right: 33px;
+    margin-top: -28px;
+    margin-bottom: -12px;
+    font-weight: w600;
+    font-size: 15px;
+}
+ion-tab-button,ion-tab-bar{
+    background-color:#00853c;
+}
+.swiper-container {
+    margin: 0 -38px;
+    width: auto;
+    
+}

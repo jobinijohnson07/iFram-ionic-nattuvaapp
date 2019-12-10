@@ -1,0 +1,230 @@
+<ion-header>
+    <ion-toolbar>
+    <ion-title>iFarms</ion-title>
+    <!-- <p class="button"><ion-icon name="arrow-back"></ion-icon></p> -->
+    <p class="button"><ion-icon name="arrow-back" (click)='openChat()'></ion-icon></p> 
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="pageName == 'Farm'">
+    <ion-card >
+        <img src="../../assets/farm.jpeg" />
+        <div class="card-title">
+            <P>Rangan's Farm</P>
+        </div>
+        <div class="card-subtitle">
+            <h5>Farm</h5>
+        </div>
+        <ion-col size="4">
+            <ion-row>
+                <ion-col size="3">
+                    <ion-icon name="pin" style="zoom:1.8;"></ion-icon>
+                </ion-col>
+                <ion-col size="9">
+                    <p class="name">Shahapur,Maharastra</p>
+                </ion-col>
+            </ion-row>
+            <p class="title">Description</p><br>
+            <p class="para">A large scale fertiliser cooperative federation based in india which is registered as a Multistate cooperative Society.</p>
+        </ion-col>
+    </ion-card>
+    <p class="list">Products sold by it:</p>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide>
+            <a (click)="goto('wheat')">
+                <ion-card>
+                    <img src="../../assets/wheat.png" />
+                    <p class="products">Crop</p>
+                    <p class="fertiliser">Wheat</p>
+                    <p class="rate">Rs.320.0</p>
+                    <p class="per">per kg</p>
+                </ion-card>
+            </a>
+        </ion-slide>
+        <ion-slide>
+                <a (click)="goto('corn')">
+            <ion-card>
+                <p class="image"><img src="../../assets/cornss.jpeg" /></p>
+                <p class="products1">Crop</p>
+                <p class="fertiliser">Corn</p>  
+                <p class="rate">Rs.220.0</p>
+                <p class="per">per kg</p>
+            </ion-card>
+            </a>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+
+<ion-content *ngIf = "pageName == 'Aavin'">
+    <ion-card >
+        <img class="aavin-img" src="../../assets/aavin.jpeg" />
+        <div class="card-title">
+            <P>Aavin</P>
+        </div>
+        <div class="card-subtitle">
+            <h5>Cooperative</h5>
+        </div>
+        <ion-col size="4">
+            <ion-row>
+                <ion-col size="3">
+                    <ion-icon name="pin" style="zoom:1.8;"></ion-icon>
+                </ion-col>
+                <ion-col size="9">
+                    <p class="name">Saket place, New Delhi</p>
+                </ion-col>
+            </ion-row>
+            <p class="title">Description</p><br>
+            <p class="para">A large scale fertiliser cooperative federation based in india which is registered as a Multistate cooperative Society.</p>
+        </ion-col>
+    </ion-card>
+    <p class="list">Farms part of it:</p>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide>
+            <a (click)="goto()">
+                <ion-card>
+                    <p class="image"><img src="../../assets/kawai.jpg" /></p>
+                    <p class="crops">farm</p>
+                    <p class="coop">Kawai Farm</p>
+                </ion-card>
+            </a>
+        </ion-slide>
+        <ion-slide>
+                <a (click)="goto('delight')">
+                   <ion-card>
+                     <p class="image"><img src="../../assets/delight.jpeg" /></p>
+                     <p class="crops">farm</p>
+                     <p class="coop">Delight Farm</p>
+                     
+                  </ion-card>
+               </a>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+       
+<ion-content *ngIf = "pageName == 'IFFCO'">
+    <ion-card >
+            <img class="iffco-img" src="../../assets/iffcoo-logo.png" />
+        <div class="card-title">
+            <P>Indian Farmers Fertiliser Coop. (IFFCO)</P>
+        </div>
+        <div class="card-subtitle">
+            <h5>Cooperative</h5>
+        </div>
+        <ion-col size="4">
+            <ion-row>
+                <ion-col size="3">
+                    <ion-icon name="pin" style="zoom:1.8;"></ion-icon>
+                </ion-col>
+                <ion-col size="9">
+                    <p class="name">Saket place, New Delhi</p>
+                </ion-col>
+            </ion-row>
+            <p class="title">Description</p><br>
+            <p class="para">A large scale fertiliser cooperative federation based in india which is registered as a Multistate cooperative Society.</p>
+        </ion-col>
+    </ion-card>
+    <p class="list">Farms part of it:</p>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide>
+            <a (click)="goto()">
+                <ion-card>
+                    <p class="image"><img src="../../assets/kawai.jpg" /></p>
+                    <p class="crops">farm</p>
+                    <p class="coop">Kawai Farm</p>
+                    
+                </ion-card>
+            </a>
+        </ion-slide>
+        <ion-slide>
+                <a (click)="goto('delight')">
+                   <ion-card>
+                     <p class="image"><img src="../../assets/delight.jpeg" /></p>
+                     <p class="crops">farm</p>
+                     <p class="coop">Delight Farm</p>
+                     
+                  </ion-card>
+               </a>
+        </ion-slide>
+        <ion-slide>
+                <a (click)="goto()"> 
+            <ion-card>
+                <p class="image"><img src="../../assets/blueridge.jpeg" /></p>
+                <p class="crops">farm</p>
+                <p class="coop">BlueRidge Farm</p>
+                
+            </ion-card>
+            </a>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+
+<ion-content *ngIf="pageName == 'item'">
+        <form name="form" (ngSubmit)="addToCart()" #f="ngForm">
+        <ion-card>
+           
+            <img class=" "  src="{{item.imageUrl}}" /> 
+            <div class="card-title">
+                <P>{{item.name}}</P>
+            </div>
+            <div class="card-subtitle">
+                <h5>{{item.category}}</h5>
+            </div>
+    
+            <ion-row>
+                <ion-col size="8">
+                    <p class="value kilo1">{{item.quantity}}</p>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value amount1">Rs.{{item.price}}</p>
+                    <p class="value per1">per kg</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="12">
+                    <p class="value title1">Seller</p>
+                    <p class="value person1">Sasi Kumar</p>
+                    <p class="value place1">Coimbatore,TN</p>
+                    <p class="value rating1">
+                        <ion-icon class="value icon1" name="star"></ion-icon>4.3 rated</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <p class="value product1">Quantity</p>
+                </ion-col>
+                <ion-col size="6">
+                    <!-- <p class ="value">kgs: <input type="text" class="value kg1" placeholder="" name="unit"> </p> -->
+                    <p class="value kg1">kgs:</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="6">
+                    <p class=" value contract1">Forward Contract</p>
+                    <p class=" value order1">Delivery by,</p>
+                </ion-col>
+                <ion-col size="6">
+                    <p class="value delivery1">Sep 18,2018</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="4">
+                    <p class=" value icon2">
+                            <ion-icon (click)="addToCart()" name="cart"></ion-icon> 
+                    </p>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-button shape="round"(click)="addToCart()">ORDER NOW</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value icon3">
+                        <ion-icon name="heart-empty"></ion-icon>
+                    </p>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+        </form>
+    </ion-content>
+    

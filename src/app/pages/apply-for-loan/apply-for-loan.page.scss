@@ -1,0 +1,28 @@
+.title {
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-family: 'Montserrat';
+    color: black
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 13px;
+    text-decoration-line: underline;
+    font-family: 'Montserrat';
+    color: black
+}
+
+.sc-ion-card-md-s img {
+    display: block;
+    max-width: 55%;
+    padding: 15px;
+}
+
+ion-card {
+    margin-left: auto;
+    margin-right: auto;
+}

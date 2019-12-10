@@ -1,0 +1,194 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>iFarms</ion-title>
+        <p class="value back"><ion-icon name="arrow-back" (click)='openChat()'></ion-icon></p> 
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="pageName == 'wheat'">
+    <ion-card>
+        <img src="../../assets/wheat.png" />
+        <div class="card-title">
+            <P>Wheat</P>
+        </div>
+        <div class="card-subtitle">
+            <h5>Crop</h5>
+        </div>
+
+        <ion-row>
+            <ion-col size="8">
+                <p class="value kilo1">80 kgs</p>
+            </ion-col>
+            <ion-col size="4">
+                <p class="value amount1">Rs. 32.0</p>
+                <p class="value per1">per kg</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="12">
+                <p class="value title1">Seller</p>
+                <p class="value person1">Sasi Kumar</p>
+                <p class="value place1">Coimbatore,TN</p>
+                <p class="value rating1">
+                    <ion-icon class="value icon1" name="star"></ion-icon>4.3 rated</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="6">
+                <p class="value product1">Quantity</p>
+            </ion-col>
+            <ion-col size="6">
+                <p class="value kg1">kgs:</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="6">
+                <p class=" value contract1">Forward Contract</p>
+                <p class=" value order1">Delivery by,</p>
+            </ion-col>
+            <ion-col size="6">
+                <p class="value delivery1">Sep 18,2018</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="4">
+                <p class=" value icon2">
+                    <ion-icon name="cart"></ion-icon>
+                </p>
+            </ion-col>
+            <ion-col size="4">
+                <ion-button shape="round">ORDER NOW</ion-button>
+            </ion-col>
+            <ion-col size="4">
+                <p class="value icon3">
+                    <ion-icon name="heart-empty"></ion-icon>
+                </p>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+</ion-content>
+
+<ion-content *ngIf="pageName == 'corn'">
+        <ion-card>
+            <img src="../../assets/cornss.jpeg" />
+            <div class="card-title">
+                <P>Corn</P>
+            </div>
+            <div class="card-subtitle">
+                <h5>Crop</h5>
+            </div>
+    
+            <ion-row>
+                <ion-col size="8">
+                    <p class="value kilo1">80 kgs</p>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value amount1">Rs. 32.0</p>
+                    <p class="value per1">per kg</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="12">
+                    <p class="value title1">Seller</p>
+                    <p class="value person1">Sasi Kumar</p>
+                    <p class="value place1">Coimbatore,TN</p>
+                    <p class="value rating1">
+                        <ion-icon class="value icon1" name="star"></ion-icon>4.3 rated</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <p class="value product1">Quantity</p>
+                </ion-col>
+                <ion-col size="6">
+                    <p class="value kg1">kgs:</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="6">
+                    <p class=" value contract1">Forward Contract</p>
+                    <p class=" value order1">Delivery by,</p>
+                </ion-col>
+                <ion-col size="6">
+                    <p class="value delivery1">Sep 18,2018</p>
+                </ion-col>
+            </ion-row>
+    
+            <ion-row>
+                <ion-col size="4">
+                    <p class=" value icon2">
+                        <ion-icon name="cart"></ion-icon>
+                    </p>
+                </ion-col>
+                <ion-col size="4">
+                    <ion-button shape="round">ORDER NOW</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                    <p class="value icon3">
+                        <ion-icon name="heart-empty"></ion-icon>
+                    </p>
+                </ion-col>
+            </ion-row>
+    
+        </ion-card>
+    </ion-content>
+    
+
+<ion-content *ngIf="pageName == 'delight'">
+    <ion-card>
+        <img src="../../assets/farm.jpeg" />
+        <div class="card-title">
+            <P>Delight Farm</P>
+        </div>
+        <div class="card-subtitle">
+            <h5>Farm</h5>
+        </div>
+        <ion-col size="4">
+            <ion-row>
+                <ion-col size="3">
+                    <ion-icon name="pin" style="zoom:1.8;"></ion-icon>
+                </ion-col>
+                <ion-col size="9">
+                    <p class="name">Shahapur,Maharastra</p>
+                </ion-col>
+            </ion-row>
+            <p class="title">Description</p><br>
+            <p class="para">A large scale fertiliser cooperative federation based in india which is registered as a Multistate cooperative Society.</p>
+        </ion-col>
+    </ion-card>
+    <p class="list">Products sold by it:</p>
+    <ion-slides [options]="sliderConfig" #slides>
+        <ion-slide>
+            <a (click)="goto('wheat')">
+                <ion-card>
+                    <img src="../../assets/wheat.png" />
+                    <p class="products">Crop</p>
+                    <p class="fertiliser">Wheat</p>
+                    <p class="arrow">></p>
+                    <p class="kilo">150 kg</p>
+                    <p class="rate">Rs.320.0</p>
+                    <p class="per">per kg</p>
+                </ion-card>
+            </a>
+        </ion-slide>
+        <ion-slide>
+                <a (click)="goto('corn')">
+              <ion-card> 
+                <p class="image"><img src="../../assets/cornss.jpeg" /></p>
+                <p class="crops">Crop</p>
+                <p class="coop">Corn</p>
+                <p class="arrow">></p>
+                <p class="kilo">80 kg</p>
+                <p class="rate">Rs.220.0</p>
+                <p class="per">per kg</p>
+            </ion-card>
+               </a>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

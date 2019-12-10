@@ -1,0 +1,22 @@
+{
+    "Login": {
+        "TITLE": "Login",
+        "SELECT": "Select language",
+        "E-mail": "E-mail",
+        "Password": "Password",
+        "Sub-login": "or Login with",
+        "signup": "Signup",
+        "fbBtn": "Facebook",
+        "googleBtn": "Google",
+        "Account": "Don't have an account?",
+        "Create": "Create an account"
+    },
+
+    "Home": {
+        "name": "Farms & Co-ops",
+        "View-all": "View all",
+        "Available-products": "Available products",
+        "Order-Now": "Order Now"
+    }
+}
+

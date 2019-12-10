@@ -1,0 +1,98 @@
+.card-title {
+    margin-top: 13px;
+    font-family: "Roboto, san-serif, aria";
+    font-size: 16px;
+    color: grey;
+    margin-left: 17px;
+}
+
+.card-subtitle {
+    margin-top: -17px;
+    font-size: 29px;
+    font-weight: w600;
+    color: black;
+    font-family: "Roboto, san-serif, aria";
+    margin-left: 17px;
+    
+}
+
+.kilogram{
+    margin-top: -31px;
+    font-size: 13px;
+    color: grey;
+    margin-left: 21px;
+}
+
+.subtitle {
+    text-align: left;
+    font-size: 27px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    margin-left: 33px;
+    font-weight: w600;
+    color: #076907;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #076907;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em
+}
+
+
+
+.seed {
+    margin-top: -12px;
+    margin-top: 13px;
+    font-family: "Roboto, san-serif, aria";
+    margin-left: 17px;
+    font-size: 24px;
+    font-weight: w600;
+}
+
+.date {
+    margin-top: -24px;
+    margin-left: 22px;
+    font-family: "Roboto, san-serif, aria";
+    font-size: 16px;
+    color: grey;
+}
+
+.month {
+    margin-top: -24px;
+    margin-left: 22px;
+    font-family: "Roboto, san-serif, aria";
+    font-size: 16px;
+    color: grey;
+    margin-bottom: -21px;
+}
+
+.description {
+    margin-top: -5px;
+    margin-left: 20px;
+    font-family: "Roboto, san-serif, aria";
+    font-size: 18px;
+    color: grey;
+}
+
+.desc {
+    font-family: "Roboto, san-serif, aria";
+    font-size: 18px;
+    color: grey;
+    margin-top: -18px;
+    margin-left: 20px;
+    margin-bottom:-24px;
+}
+
+.seeds {
+    margin-top: -12px;
+    margin-top: 13px;
+    font-family: "Roboto, san-serif, aria";
+    margin-left: 17px;
+    font-size: 24px;
+    font-weight: w600;
+    color:grey 
+}

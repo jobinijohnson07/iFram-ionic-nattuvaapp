@@ -1,0 +1,55 @@
+<ion-content class="backgrounIMG">
+<div class="image-box">
+  <div class="backgrounIMG">
+  <!-- <div class="image-box__overlay"></div> -->
+  <div class="image-box__content">
+    <ion-row class="ion-justify-content-center">
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <!-- <ion-row>
+          <ion-col size="12">
+            <img class=" farms-logo" src="../../assets/iFarms-logo.png">
+          </ion-col>
+          
+      </ion-row> -->
+
+       
+          <form class="form" [formGroup]="validations_form" (ngSubmit)="tryRegister(validations_form.value)">
+            <ion-item>
+              <ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.email">
+                <div class="error-message"
+                  *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+            <ion-item>
+              <ion-input type="text" formControlName="password" placeholder="Password"></ion-input>
+            </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.password">
+                <div class="error-message"
+                  *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+          
+            </div>
+            <ion-row>
+              <ion-col size="6">
+            <ion-button color="warning" shape="round" (click)="register()"  class="submit-btn" type="submit" [disabled]="!validations_form.valid">Register</ion-button>
+            <label class="error-message">{{errorMessage}}</label>
+            <label class="success-message">{{successMessage}}</label>
+              </ion-col>
+            </ion-row>
+          </form>
+          <p class="go-to-login">Already have an account? <a (click)="goLoginPage()" style="color: black;">Try to Log In.</a></p>
+      
+      </ion-col>
+    </ion-row>
+  </div>
+</div>
+</div>
+</ion-content>
